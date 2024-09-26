@@ -14,9 +14,9 @@ future: true
 # SNS settings
 RSS: false
 weibo_username: yang
-zhihu_username: huxpro
-github_username: huxpro
-twitter_username: huxpro
+zhihu_username: dreameutopia
+github_username: dreameutopia
+twitter_username: dreameutopia
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
 

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "2024--学习计划"
+title:      "2024--开山之作"
 subtitle:   " \"扬帆起航\""
 date:       2024-09-26 12:00:00
 author:     "eutopia"
@@ -8,6 +8,8 @@ header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
     - Web
+    - linux
+    - debian
     - JavaScript
 ---
 

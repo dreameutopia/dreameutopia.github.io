@@ -27,15 +27,15 @@ tags:
 
 接下来说说刷机debian12的技术细节。  
 
-正好之前就有关注过 [GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速 Building Blog 的技术方案，非常轻松时尚。
+正好之前就有关注过 酷安和b站大佬的刷机视频，产生了一定的兴趣
 
-其优点非常明显：
+那我们就先了解一下对于我来说他的用处吧：
 
 * 可以免梯子访问chatgpt
-* 非常熟悉的 Git workflow ，**Git Commit 即 Blog Post**
-* 利用 GitHub Pages 的域名和免费无限空间，不用自己折腾主机
-	* 如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了 
-* Jekyll 的自定制非常容易，基本就是个模版引擎
+* 部署mysql，可以实现远程数据库，也可以配合安卓平板上学习数据库管理
+* 部署alist，可以随时无画质以及内存限制观看网盘上的网课
+* 部署drawio，网页端无需会员绘制思维导图
+* 最基本的：学习一下linux的基本命令
 
 
 本来觉得最大的缺点可能是 GitHub 在国内访问起来太慢，所以第二天一起床就到 GitCafe(Chinese GitHub Copy，现在被 Coding 收购了) 迁移了一个[镜像](http://huxpro.coding.me)出来，结果还是巨慢。

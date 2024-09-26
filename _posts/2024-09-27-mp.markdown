@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "平板编程"
-subtitle:   " \"Hello World, Hello Blog\""
+subtitle:   " 悟已往之不谏，知来者之可追"
 date:       2024-09-27 12:00:00
 author:     "eutopia"
 header-img: "img/post-bg-2015.jpg"
@@ -13,7 +13,7 @@ tags:
     - Mysql
 ---
 
-> “Yeah It's on. ”
+> “Begining ！！！”
 
 
 平板被很多人戏称买前生产力，买后爱奇艺。

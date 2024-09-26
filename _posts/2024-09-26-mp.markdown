@@ -93,7 +93,7 @@ jgraph/drawio                           网页端思维导图创建工具
 
 最后就进入了愉快的的**享受**阶段，也算是进入了**linux**的正轨。
 
-第二天考虑中文字体的渲染，fork 了 [Type is Beautiful](http://www.typeisbeautiful.com/) 
+ [参考](https://www.bilibili.com/read/cv24666539/) 
 
 
 ## 后记

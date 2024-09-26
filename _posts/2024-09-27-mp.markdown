@@ -52,7 +52,13 @@ tags:
 
 这点就很妙，打开vscode后打开终端，输入 apt update 和apt install g++，然后在插件里安装code runner，和c++相关插件，OK，现在你的vscode已经可以跑起来c++了
 
-其他需要安装的软件 **Qt Creator**，**pycharm**，**idea**，**Datagrip**
+
+### 需要手动安装的工具
+
+- **Qt Creator**
+- **PyCharm**
+- **IntelliJ IDEA**
+- **DataGrip**
 
 
 Qt Creator这个直接通过打开终端apt安装就行，命令是 apt install qt creator,下面主要介绍一下剩余的几个软件吧
@@ -62,9 +68,9 @@ Qt Creator这个直接通过打开终端apt安装就行，命令是 apt install 
 尝试部分软件后jetbrains这个公司可以说完全戳中我安卓编程梦的心巴，它旗下的Idea，Pycharm，Datagrip都是完美适配安卓运行（实际上是在小小电脑里的），打开firefox点击官网，点击linux的communtiy下的**tar.gz(Linux arm64)**下载下来即可，当然如果你是大学生，用学校邮箱是可以**免费**体验全家桶专业版，实在是太友好了
 
 
-**运行datagrip介绍**
+### 运行datagrip介绍
 
-datagrip只是一个连接并管理mysql的工具，所以我们还需要一个数据库提供链接，当然我们只研究本地的方法，我实测在小小电脑内安装mysql可能会出现适配问题，这里试错过后选择在安卓端安装 **Ksweb**
+为什么我们要专门把这个拎出来说呢？datagrip只是一个连接并管理mysql的工具，所以我们还需要一个数据库提供链接，当然我们只研究本地的方法，相较于jkd和python环境的易装，我实测在小小电脑内安装mysql可能会出现适配问题，这里试错过后选择在安卓端安装 **Ksweb**
 简单介绍一下ksweb吧，它是一个集齐PHP，mysql,nginx和一系列建站工具集合，我们这里只用到mysql，所以这里只针对这一点，我们首先在辅助工具里面安装phpadmin，登录对应网站账号root密码不填进入管理界面，修改root密码为123456，然后进入datagrip连接即可，连接速度很快
 
 

@@ -32,16 +32,25 @@ tags:
 
 当然也可以用termux和zerotermux模拟linux环境，这里选用一个最简单，ui界面最适合小白的小小电脑
 
-我主要要是使用Java，c++，python，QT和mysql，这里在安卓都可以使用他们的主流开发软件
+小小电脑支持多种主流编程语言，包括但不限于：
+- Java
+- C++
+- Python
+- QT
+- MySQL
+
 
 首先了解一下为什么可以实现这些功能：
 
 * 安卓实际上是基于linux作为底层的，所以可以无需虚拟机模拟linux环境
 * 有基于arm架构的linux的编译器
 
+### 开箱即用的工具
 
+- **VSCode**：内置的Visual Studio Code编辑器，开箱即用，支持通过终端安装额外的开发工具，如`g++`。
+- **Firefox**：预装的浏览器，方便在线查阅文档或资料。
 
-小小电脑自带**vscode**和firefox，这点就很妙，打开vscode后打开终端，输入 apt update 和apt install g++，然后在插件里安装code runner，和c++相关插件，OK，现在你的vscode已经可以跑起来c++了
+这点就很妙，打开vscode后打开终端，输入 apt update 和apt install g++，然后在插件里安装code runner，和c++相关插件，OK，现在你的vscode已经可以跑起来c++了
 
 其他需要安装的软件 **Qt Creator**，**pycharm**，**idea**，**Datagrip**
 
@@ -50,7 +59,7 @@ Qt Creator这个直接通过打开终端apt安装就行，命令是 apt install 
 
 虽然说安卓基于linux底层，但是说到底都改名了，有很多底层代码还是改变了，功能也阉割了许多，所以一些就算满足支持arm的linux软件也无法在本地运行，小小电脑在跨架构支持里添加了box64和box86和wine转译，但是实测下来对于开发来说并没有什么帮助，我尝试了诸多软件后只借助box64运行了一个landrop（一个局域网文件传输工具），这里就不多做介绍了
 
-尝试部分软件后jetbrains这个公司可以说完全戳中我安卓编程梦的心巴，它旗下的Idea，Pycharm，Datagrip都是完美适配安卓运行（实际上是在小小电脑里的），点击官网，点击linux的communtiy下的**tar.gz(Linux arm64)**下载下来即可，当然如果你是大学生，用学校邮箱是可以**免费**体验全家桶专业版，实在是太友好了
+尝试部分软件后jetbrains这个公司可以说完全戳中我安卓编程梦的心巴，它旗下的Idea，Pycharm，Datagrip都是完美适配安卓运行（实际上是在小小电脑里的），打开firefox点击官网，点击linux的communtiy下的**tar.gz(Linux arm64)**下载下来即可，当然如果你是大学生，用学校邮箱是可以**免费**体验全家桶专业版，实在是太友好了
 
 
 **运行datagrip介绍**

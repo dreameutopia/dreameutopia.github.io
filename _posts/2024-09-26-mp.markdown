@@ -80,14 +80,16 @@ OK嗷，到这里，相信你的随身WiFi已经拥有一个合格的linux系统
 **本人推荐标配内存docker搭建及镜像选择**
 
 命令：
-**nmtui**
+
+
+**nmtui**                                                                                                             ->(用于连接wifi)
 * 删除原有的WiFi
 * 点击启用wifi，连接自己的wifi，注意这里只能连接2.4G的WiFi，如果是开热点找不到记得留意这点
 
 
-apt update
-apt install docker docker-compose
-curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sudo bash quick_start.sh
+apt update                                                                                                            ->(更新软件源，忽视报错)
+apt install docker docker-compose                                                                                     ->(安装docker)
+curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sudo bash quick_start.sh  -->(安装docker)
 
 到这里已经完成了docker的安装，你也拥有一个功能齐全的轻量级管理面板
 

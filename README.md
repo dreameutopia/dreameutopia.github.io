@@ -1,7 +1,7 @@
-[Hux Blog](https://huangxuan.me)
+[Eutopia Blog](https://dreameutopia.cn)
 ================================
 
-> I never expected this to become popular.
+> 这是我的博客，记录我的大学生涯
 
 ![](http://huangxuan.me/img/blog-desktop.jpg)
 

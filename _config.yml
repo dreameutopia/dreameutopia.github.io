@@ -70,11 +70,11 @@ netease_comment: false
 
 # Google Analytics
 ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_domain: dreameutopia.cn
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 dream 的程序员 <br> React Team @ Meta"
+sidebar-about-description: "要做一个有 dream 的程序员 <br> From:杨晋豪"
 sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
@@ -89,7 +89,7 @@ service-worker: true
 page-mathjax: false
 
 # Friends
-friends:
+AI:
   [
     { title: "通义千问", href: "https://qianwen.aliyun.com/" },
     { title: "豆包", href: "https://www.doubao.com/chat/" },

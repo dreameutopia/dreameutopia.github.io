@@ -89,7 +89,7 @@ service-worker: true
 page-mathjax: false
 
 # Friends
-AI:
+friends:
   [
     { title: "通义千问", href: "https://qianwen.aliyun.com/" },
     { title: "豆包", href: "https://www.doubao.com/chat/" },

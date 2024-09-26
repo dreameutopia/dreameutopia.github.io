@@ -44,6 +44,7 @@ tags:
 
 **刷前知识普及：**
 
+* linux是一个完全开源的系统，不同于windos和Macos，它拥有更高的可操纵性，对功能进行精简，以命令行作为最主要的控制方式，回归到了最原始但是最有效的方法，它有很多分支，有Ubuntu，debian，centos等等等等，Ubuntu拥有最大的用户社区，Debian拥有极低的配置要求，centos拥有最好的服务端适配
 * 高通410的随身WiFi完全可以理解为一个极简的安卓手机，只不过只保留了热点这一个功能
 * 高通410这一颗CPU作为arm架构处理器，以及标配512MB+4G空间，是可以直接运行debian这种对性能要求极低的且没有图形化控制界面的系统
 * adb实际上是安卓系统提供的一个电脑调试手机的方式，后续可以输入命令控制linux系统
@@ -60,7 +61,7 @@ tags:
 
 ---
 
-接下来就是最简单的刷机部分了
+接下来就是最简单的刷机部分了，打开bat刷机文件，成功连接后会显示已经链接的adb设备或者fastboot设备，有一些不能辅助adb设备重启进入fastboot模式的cmd进入命令行输入adb reboot bootloader将棒子进入fastboot刷机模式
 
 确定好主板型号后直接选择对应的linux系统，如（debian，openwrt，centos），这里建议为了防止随身wifi过热死机，最好就放弃插卡这个功能，这也就代表我们可以多释放100MB的运存，选择内存释放版，然后根据自身需要选择超频版本，实测的话最好超频到1.2ghz或者1,4ghz就够了，再多容易发烫而且对于性能几乎没有带来体验感的影响。
 
@@ -85,9 +86,12 @@ curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_
 
 到这里已经完成了docker的安装，你也拥有一个功能齐全的轻量级管理面板
 
-Theme 的 CSS 是基于 Bootstrap 定制的，看得不爽的地方直接在 Less 里改就好了（平时更习惯 SCSS 些），**不过其实我一直觉得 Bootstrap 在移动端的体验做得相当一般，比我在淘宝参与的团队 CSS 框架差多了……**所以为了体验，也补了不少 CSS 进去
+推荐的docker镜像
+ydlhero/chatgpt-web-midjourney-proxy    免梯子使用chatgpt
+xhofe/alist:latest                      网盘聚合工具
+jgraph/drawio                           网页端思维导图创建工具
 
-最后就进入了耗时反而最长的**做图、写字**阶段，也算是进入了**写博客**的正轨，因为是类似 Hack Day 的方式去搭这个站的，所以折腾折腾着大半夜就过去了。
+最后就进入了愉快的的**享受**阶段，也算是进入了**linux**的正轨。
 
 第二天考虑中文字体的渲染，fork 了 [Type is Beautiful](http://www.typeisbeautiful.com/) 
 

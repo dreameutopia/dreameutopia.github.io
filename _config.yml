@@ -74,7 +74,7 @@ ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 freestyle 的程序员 <br> React Team @ Meta"
+sidebar-about-description: "要做一个有 dream 的程序员 <br> React Team @ Meta"
 sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
@@ -91,12 +91,12 @@ page-mathjax: false
 # Friends
 friends:
   [
-    { title: "乱序（Midare）", href: "http://mida.re/" },
-    { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
-    { title: "Kun Qian", href: "http://kunq.me" },
-    { title: "Sherry Woo", href: "https://sherrywoo.me/" },
-    { title: "SmdCn", href: "http://blog.smdcn.net" },
-    { title: "JiyinYiyong", href: "http://tiye.me/" },
-    { title: "DHong Say", href: "http://dhong.co" },
-    { title: "尹峰以为", href: "http://ingf.github.io/" },
+    { title: "通义千问", href: "https://qianwen.aliyun.com/" },
+    { title: "豆包", href: "https://www.doubao.com/chat/" },
+    { title: "KiMi", href: "https://kimi.moonshot.cn/" },
+    { title: "天工", href: "https://www.tiangong.cn/" },
+    { title: "notdiamond自动匹配大模型", href: "https://chat.notdiamond.ai/" },
+    { title: "liblib 绘画ai", href: "https://www.liblib.art/" },
+    { title: "Chatgpt镜像站", href: "https://chat2.oaichat.cc/" },
+    { title: "Chatgpt备用镜像站", href: " https://chat.tinycms.xyz:3002/" },
   ]

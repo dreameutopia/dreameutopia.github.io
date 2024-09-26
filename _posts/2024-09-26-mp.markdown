@@ -11,13 +11,11 @@ tags:
     - JavaScript
 ---
 
-> “Yeah It's on. ”
+> “Yeah Keeping going！！！. ”
 
 
 大二的大学牲终于要开始自己的编程之旅了
 
-
-在此之前完成了对linux和c++的初步入门，这个学期打算开始进修java架构师，多多参加算法比赛。
 
 前段时间一直研究随身WiFi刷机linux也就是debian12运行docker，也算是最最最最便宜的入门级服务器了，今天这里就先介绍一下刷机的过程吧。
 
@@ -71,8 +69,7 @@ OK嗷，到这里，相信你的随身WiFi已经拥有一个合格的linux系统
 
 **本人推荐标配内存docker搭建及镜像选择**
 
-nmtui
-
+**nmtui**
 * 删除原有的WiFi
 * 点击启用wifi，连接自己的wifi，注意这里只能连接2.4G的WiFi，如果是开热点找不到记得留意这点
 

@@ -30,10 +30,10 @@ tags:
 
 
 
-Vue 3, "Reactive (Closure-based) OOP"
+服务器端
 -------------------------------------
 
-先来看 Vue（本文中的 Vue 主要指使用 Composition API 下的 Vue）
+先来看 主线程吧
 
 ```java
 public static void main(String[] args) {
@@ -56,7 +56,7 @@ public static void main(String[] args) {
 ```
 
 
-Vue 为组件挑选的语义是「对象」：Composition API 的`setup` 只会调用一次并返回一个对象合并到 `Counter` 组件上，这个对象与其成员全都是持久的引用，包括保存在 `inc` 闭包中的状态 `count` 也是持久的。渲染则是对组件上的`template` 域的具象化。
+这里通过while循环来不断接受新客户端的链接，不断创建子线程来接受处理
 
 Vue 附加的核心语义是（基于可变数据的）「响应式（reactive）」：状态 `count` 是一个响应式对象，`inc` 进行状态更改的方式是对 `count` 直接修改，状态更改的结果是执行所有观察者（watcher）的逻辑，包括重渲染和执行副作用（`watchEffect`) ，都是基于这个语义纳入数据流。
 

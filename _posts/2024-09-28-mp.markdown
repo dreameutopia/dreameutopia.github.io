@@ -10,23 +10,22 @@ tags:
   - Thread
 ---
 
-> 这篇文章转载自[我在知乎上的回答](https://www.zhihu.com/question/378861485/answer/1125724740)
+> Ai辅助开发Gui界面
 
 
-**不能，因为是很不一样的[心智模型](https://www.zhihu.com/search?q=%E5%BF%83%E6%99%BA%E6%A8%A1%E5%9E%8B&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1125724740%7D)（Mental Model）。**我觉得很多同学只关注到了这两套 API 在功能上都能复用逻辑的相似点，而低估了两个框架体系「大背景」上的差异。
+好吧，实际上写到这我Java只入门了一周，但秉承着分享和记录的理念，我还是想把这个入门之作写出来，这里也是第一次感受「多线程」的魅力。
 
 正文开始前我先声明一下，
 
-1.  一是本文观点不代表公司。我是觉得圈子里不认同 Hooks 的声音太多了（比如 [@徐飞](//www.zhihu.com/people/c5198d4e9c0145aee04dd53cc6590edd) 叔叔、 [@贺师俊](//www.zhihu.com/people/3ec3b166992a5a90a1083945d2490d38) 贺老、 [@题叶](//www.zhihu.com/people/790dccce26904cdcd11b0fad3bac37b7) 同学等老朋友 no offensive），所以自愿出来平衡一下。
+1.  
 
-2.  二是我确实好久没有实际写前端了 ，React Hooks 实战还不多，Vue 3 只草草略读了 [Composition API RFC](https://link.zhihu.com/?target=https%3A//vue-composition-api-rfc.netlify.com/) 与之前中文的 [Vue Function-based API RFC](https://zhuanlan.zhihu.com/p/68477600)（所以对细节并不太熟悉。）欢迎大家务必指正、补充（与要求补充）。
-
+2.  
 引言
 --
 
 「框架/库是编程语言上的抽象」，并不意味着框架的设计就无法跳脱出其实现语言的习语（idioms）与编程范式（paradiams）。
 
-得益于 JavaScript 几个非常 Lisp 的特点：一等公民函数、动态类型、一定的宏支持（比如 Babel），这几年[前端框架](https://www.zhihu.com/search?q=%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1125724740%7D)的发展可以看到很多编程语言设计的思路：框架成为了由 DSL 与 API 构成的特定语法（syntax）、从 JavaScript 中扬弃以及由 API 附加的语义（semantics）、支撑这套体系运作的运行时（runtime）、以及所表达的心智模型（[mental model](https://www.zhihu.com/search?q=mental+model&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1125724740%7D)）的结合。
+
 
 
 
@@ -74,9 +73,7 @@ component Counter (props) {    // constructor
 
 是不是有基于类的 OOP 内味了？只不过 Vue 的对象是基于单例（或者闭包）而非类（或原型）实现，以及成员是被施过 reactive 魔法哒！这里我们展示了如何从概念上将 Vue 归约到 OOP 的心智模型，不过需要注意得是，Vue 整个体系（考虑状态管理、[数据流控制](https://www.zhihu.com/search?q=%E6%95%B0%E6%8D%AE%E6%B5%81%E6%8E%A7%E5%88%B6&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1125724740%7D)）的心智模型有很多 FP 的东西在里面，仍然和传统观念（比如 Java）的 OOP 有很大差别，[\[2\]](#ref_2)[\[3\]](#ref_3)。
 
-Vue 运行时的核心是 dependency tracking（依赖追踪），首先它使得 reactive 语义对用户相对 implicit（隐式），依赖都是自动收集的，大大降低了用户的心智负担。其次呢它非常细的跟踪粒度配合 Vue 使用静态化程度比较高模板使得重渲染自动就可以做到非常精准。
 
-总结起来，Vue 在组件方面的心智模型仍然是「拥有数据与行为且自响应式的对象」，只要照着这个思路去想，就比较好理解「为什么 Vue 的状态可以使用可变数据结构」、「为什么 Vue 需要`ref` 包装值类型」，以及 RFC 在对比 React Hooks 时提到的「为什么 Vue 更接近大家习惯的 JS 」（这点比较主观就是了）、「为什么 Vue 的 GC 压力会更小」、「为什么 Vue 不需要手动声明依赖」等优势的由来了。
 
 
 

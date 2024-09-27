@@ -19,11 +19,12 @@ tags:
 
 1.  
 
-2.  
-引言
+
+
+前言
 --
 
-「框架/库是编程语言上的抽象」，并不意味着框架的设计就无法跳脱出其实现语言的习语（idioms）与编程范式（paradiams）。
+上个学期在c++的学习中也学习到了多线程线程锁的概念，但是还没有正式运用到一个较为正式的项目中，这里也算是加深理解的第一个小项目。这里也在强迫自己的代码变得稍微规范一点，不要像之前的屎山代码一样了哈哈哈哈。
 
 
 
@@ -34,15 +35,24 @@ Vue 3, "Reactive (Closure-based) OOP"
 
 先来看 Vue（本文中的 Vue 主要指使用 Composition API 下的 Vue）
 
-```ts
-const Counter = {
-  setup(initialProps) {
-    const count = reactive({count: 0}) // or `ref(0)`
-    const inc = () => { count.value++ }
-    return {count, inc}
-  }
-  template: "..."
-}
+```java
+public static void main(String[] args) {
+        System.out.println("-------------启动服务端系统-----------------");
+        try {
+            //注册端口
+            ServerSocket serverSocket=new ServerSocket(constant.port);
+            //主线程负责接收客户端连接请求
+            while(true){
+                System.out.println("等待客户端连接。。。。");
+                Socket socket = serverSocket.accept();
+                new ServerReader(socket).start();
+
+                System.out.println("成功接入一个客户端");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 ```
 
 

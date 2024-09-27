@@ -5,8 +5,8 @@ header-img: img/home-bg.jpg
 email: 18058563573@163.com
 description: "这里是 @eutopia 的个人博客，与你一起发现更大的世界 | 生而无畏。战至终章"
 keyword: "eutopia, eutopia, hdreameutopia, 鬼栈, hdreameutopia, @hdreameutopia, eutopia的博客, Dream Eutopia, 博客, 个人网站, 互联网, Web, JavaScript, React, React Native, 前端, 设计"
-url: "https://huangxuan.me" # your host, for absolute URL
-baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
+url: "https://dreameutopia.github.io/" # your host, for absolute URL
+baseurl: "" # for example, '/blog' if your blog hosted on 'eutopia/blog'
 
 # Publish posts or collection documents with a future date.
 future: true

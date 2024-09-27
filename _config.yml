@@ -74,7 +74,7 @@ ga_domain: dreameutopia.cn
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 dream 的程序员 <br> From:杨晋豪"
+sidebar-about-description: "要做一个有 dream 的程序员 <br>     From:eutopiaplace"
 #sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags

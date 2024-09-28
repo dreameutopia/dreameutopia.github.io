@@ -17,7 +17,9 @@ tags:
 
 正文开始前我先声明一下，
 
-1.  
+1.  这里采用的是服务端客户端分离的代码，服务端没有Gui界面，在控制台有部分链接提示，方便信息中转
+2.  这个程序已经可以同时处理多个客户端同时登录的信息，如果有公网ip甚至可以作为一个真正的聊天程序，不必局限于局域网
+3.  代码很简单，并没有联合编程，仅作为一个练习，后续继续完善功能继续再写一篇
 
 
 
@@ -26,6 +28,7 @@ tags:
 
 上个学期在c++的学习中也学习到了多线程线程锁的概念，但是还没有正式运用到一个较为正式的项目中，这里也算是加深理解的第一个小项目。这里也在强迫自己的代码变得稍微规范一点，不要像之前的屎山代码一样了哈哈哈哈。
 这里最中心的逻辑就是不管是客户端还是服务端发送信息都是利用特殊数据流，先输出一个int数字，便于分辨后续信息类型比如客户端先发1，代表接下来是登录消息，比如客户端先发2，代表接下来是群聊消息
+
 
 
 
@@ -291,13 +294,113 @@ component Counter (props) {    // constructor
 私聊界面
 -------------------------------------------
 
-再来看 React（本文中的 React 主要指 Hooks API 下的 React）
+
 
 ```ts
-function Counter(props) {
-  const [count, setCount] = React.useState(0);
-  const inc = () => setCount(count + 1)
-  return <a onClick={inc}>{count}</a>
+public class PrivateChatPanel extends JPanel {
+    private JTextArea privateMessageArea;
+    private JTextField privateMessageField;
+    private JButton privateSendButton;
+    private JButton backButton;
+    private String currentPrivateChatUser;
+    private Socket socket;
+    private ChatWindow chatWindow;
+
+    public PrivateChatPanel(Socket socket, ChatWindow chatWindow) {
+        this.socket = socket;
+        this.chatWindow = chatWindow;
+        initialize();
+    }
+
+    private void initialize() {
+        setLayout(new BorderLayout());
+
+        // 私聊消息显示区域
+        privateMessageArea = new JTextArea();
+        privateMessageArea.setEditable(false);
+        privateMessageArea.setFont(new Font("微软雅黑", Font.PLAIN, 16));
+        privateMessageArea.setLineWrap(true);
+        privateMessageArea.setWrapStyleWord(true);
+        JScrollPane privateMessageScrollPane = new JScrollPane(privateMessageArea);
+
+        // 输入面板
+        JPanel privateInputPanel = new JPanel();
+        privateInputPanel.setBackground(Color.WHITE);
+        privateInputPanel.setLayout(new BorderLayout());
+
+        privateMessageField = new JTextField();
+        privateMessageField.setFont(new Font("微软雅黑", Font.PLAIN, 16));
+        privateInputPanel.add(privateMessageField, BorderLayout.CENTER);
+
+        privateSendButton = new JButton("私聊");
+        privateSendButton.setFont(new Font("微软雅黑", Font.BOLD, 14));
+        privateSendButton.setBackground(new Color(0x4CAF50));
+        privateSendButton.setForeground(Color.WHITE);
+        privateSendButton.setFocusPainted(false);
+        privateInputPanel.add(privateSendButton, BorderLayout.EAST);
+
+        add(privateMessageScrollPane, BorderLayout.CENTER);
+        add(privateInputPanel, BorderLayout.SOUTH);
+
+        // 返回按钮
+        backButton = new JButton("当前为私聊界面，点击返回主界面");
+        backButton.setFont(new Font("微软雅黑", Font.BOLD, 14));
+        backButton.setBackground(new Color(0xF44336));
+        backButton.setForeground(Color.WHITE);
+        backButton.setFocusPainted(false);
+        backButton.addActionListener(e -> chatWindow.switchToGroupChat());
+
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setBackground(Color.WHITE);
+        buttonPanel.add(backButton);
+        add(buttonPanel, BorderLayout.NORTH);
+
+        // 按钮监听器
+        privateSendButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String message = privateMessageField.getText();
+                privateMessageField.setText("");
+                // 发送私聊消息
+                StringBuilder sb2=new StringBuilder();
+                LocalDateTime now=LocalDateTime.now();
+                DateTimeFormatter dtf=DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss EEE a");
+                String nowstr=dtf.format(now);
+                //拼接字符串
+                StringBuilder msgresult=sb2.append("我").append(" ").append(nowstr).append("\r\n").append(message).append("\r\n").append("\r\n");
+
+                privateMessageArea.append(msgresult.toString());
+                sendMessageToServer(3, message);
+            }
+        });
+    }
+
+    public void setCurrentPrivateChatUser(String user) {
+        this.currentPrivateChatUser = user;
+        privateMessageArea.setText(""); // 清空私聊消息区域
+    }
+
+    private void sendMessageToServer(int type, String message) {
+        try {
+            DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
+            dos.writeInt(type);
+            if (type == 3) {
+                dos.writeUTF(currentPrivateChatUser); // 目标用户
+            }
+            dos.writeUTF(message);
+            dos.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public JTextArea getPrivateMessageArea() {
+        return privateMessageArea;
+    }
+
+    public String getCurrentPrivateChatUser() {
+        return currentPrivateChatUser;
+    }
+}
 }
 ```
 
@@ -403,16 +506,12 @@ React 现在运行时侧重的核心是 cooperative multitasking（协作式多�
 补充 2
 ----
 
-如果是在重度依赖 Flux (Vuex/Redux, whatever) 的场景，可能 Vue/React 会更像是一个只负责渲染的 dumb/passive layer，这种时候上文说的 Vue/React 的差异会显得不明显，因为大部分的状态管理（state management）都已经扔到更外层去做了。
-
-不过，考虑需要组件内聚的场景（即组件自己有私有状态，需要 self-conatined）以及 React Hooks / Vue Composition APIs 开始接管更多（除状态之外的，比如 IO）副作用，这种差异只会变得越来越明显得。
+如果是
 
 
-
-以上。
 
 参考
 --
 
-1.  JavaScript 模块化七日谈 - 黄玄的博客 Hux Blog [https://huangxuan.me/2015/07/09/js-module-7day/](https://huangxuan.me/2015/07/09/js-module-7day/)
+1.   [通义千文](https://tongyi.aliyun.com/)
 

@@ -422,5 +422,5 @@ public class PrivateChatPanel extends JPanel {
 参考
 --
 
-1.   [通义千文](https://tongyi.aliyun.com/)
+1.   [通义千问](https://tongyi.aliyun.com/)
 

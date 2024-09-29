@@ -1,22 +1,22 @@
 ---
 layout: post
-title: "实用链接"
+title: "大学生优惠&&软件下载"
 subtitle: "Practice!!!"
 author: "eutopia"
 header-style: text
 tags:
-  - Java
-  - Gui
-  - Thread
+  - 软件
+  - 大学
 ---
 
+软件下载
+--
 
-
-- mysql-connector-java 最新版
+**mysql-connector-java 最新版**
 
 [安装版下载地址](https://dev.mysql.com/downloads/connector/j/)
 
-- Typora安装+激活
+**Typora安装+激活**
 
 [教程](https://blog.csdn.net/y3332664073/article/details/138497340)
 

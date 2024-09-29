@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "大学生优惠&&软件下载"
-subtitle: "Practice!!!"
+subtitle: "Enjoy yourself"
 author: "eutopia"
 header-style: text
 tags:

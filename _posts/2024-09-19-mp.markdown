@@ -9,22 +9,6 @@ tags:
   - 大学
 ---
 
-软件下载
---
-
-**mysql-connector-java 最新版**
-
-[安装版下载地址](https://dev.mysql.com/downloads/connector/j/)
-
-**Typora安装+激活**
-
-[教程](https://blog.csdn.net/y3332664073/article/details/138497340)
-
-
-
-
-
-
 
 
 大学生优惠
@@ -131,5 +115,26 @@ tags:
 
 - **少数派：**[在校师生福利：Apple、微软、Adobe 等产品如何通过教育优惠购买](https://sspai.com/post/39430)
 - **少数派：**[学生专属福利，你可能还不知道这些常用服务其实可以更便宜](https://sspai.com/post/43533)
+
+
+
+
+软件下载
+--
+
+**mysql-connector-java 最新版**
+
+[安装版下载地址](https://dev.mysql.com/downloads/connector/j/)
+
+
+**Typora安装+激活**
+
+[教程](https://blog.csdn.net/y3332664073/article/details/138497340)
+
+
+
+**小小电脑**
+
+[Github下载链接](https://github.com/Cateners/tiny_computer/releases)
 
 

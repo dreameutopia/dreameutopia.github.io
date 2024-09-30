@@ -2,7 +2,7 @@
 layout:     post
 title:      "最正的爱情观"
 subtitle:   "先明白什么是爱，再去爱"
-date:       2024-09-27 12:00:00
+date:       2024-09-30 12:00:00
 author:     "eutopia"
 header-img: "img/bk-08.jpg"
 catalog: true

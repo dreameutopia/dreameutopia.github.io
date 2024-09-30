@@ -2,7 +2,7 @@
 layout:     post
 title:      "贪吃蛇寻路算法"
 subtitle:   " \"知识回顾\""
-date:       2024-09-26 12:00:00
+date:       2024-09-10 12:00:00
 author:     "eutopia"
 header-img: "img/bk-1.jpg"
 catalog: true

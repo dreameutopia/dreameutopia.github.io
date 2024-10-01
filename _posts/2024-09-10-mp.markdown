@@ -45,10 +45,20 @@ tags:
 
 
 ![1](https://github.com/dreameutopia/dreameutopia.github.io/blob/master/img/step1.jpg)
+
+
 ![1](https://github.com/dreameutopia/dreameutopia.github.io/blob/master/img/step2.jpg)
+
+
 ![1](https://github.com/dreameutopia/dreameutopia.github.io/blob/master/img/step3.jpg)
+
+
 ![1](https://github.com/dreameutopia/dreameutopia.github.io/blob/master/img/step4.jpg)
+
+
 ![1](https://github.com/dreameutopia/dreameutopia.github.io/blob/master/img/step5.jpg)
+
+
 
 我们首先来分析一下，我们的起始点就是@，目标是*，中间要避开=和#，那么我们就在创建一个int形的二维数组，@的位置设置为1，=和#设置为-1，其他位置初始化为0，第一次给1周围相邻的四个格子设置为1+1=2,第二次就给这四个格子相连的格子赋值为2+1=3，已经赋值过的不再一次赋值，
 周而复始

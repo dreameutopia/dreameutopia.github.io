@@ -44,19 +44,19 @@ tags:
 
 
 
-![1](img/step1.jpg)
+![1](hidden/step1.jpg)
 ---
 
-![1](https://github.com/dreameutopia/dreameutopia.github.io/blob/master/img/step2.jpg)
+![1](hidden/step2.jpg)
 ---
 
-![1](https://github.com/dreameutopia/dreameutopia.github.io/blob/master/img/step3.jpg)
+![1](hidden/step3.jpg)
 ---
 
-![1](https://github.com/dreameutopia/dreameutopia.github.io/blob/master/img/step4.jpg)
+![1](hidden/step4.jpg)
 ---
 
-![1](https://github.com/dreameutopia/dreameutopia.github.io/blob/master/img/step5.jpg)
+![1](hidden/step5.jpg)
 ---
 
 

@@ -44,7 +44,7 @@ tags:
 
 
 
-![1](https://github.com/dreameutopia/dreameutopia.github.io/blob/master/img/step1.jpg)
+![1](img/step1.jpg)
 ---
 
 ![1](https://github.com/dreameutopia/dreameutopia.github.io/blob/master/img/step2.jpg)
